@@ -7,25 +7,27 @@ import Graph from './graph/graph.js';
 import Leaderboard from './leaderboard/leaderboard.js';
 import LevelMeter from './level-meter/level-meter.js';
 import TwitterFeed from './twitter-feed/twitter-feed.js';
+import leaderboardData from '../data/leaderboard.json';
+import methodistData from '../data/methodist.json';
+const medUnit = methodistData.filter(u=>u.department_name === 'MED UNIT');
 
 class App extends Component{
 	render(){
 		return (
 			<div>
 				<section>
-					<Sidebar/>
+					<Sidebar data={medUnit[0]}/>
 					<div className="body-content">
 						<Header/>
 						<PageHead/>
 						<div className="wrapper">
-							<StateOverview/>
+							<StateOverview data={medUnit[0]}/>
 							<div className="row">
-								<Graph/>
-								<Leaderboard/>
+								<Graph data={medUnit} unit={medUnit[0]}/>
+								<Leaderboard data={leaderboardData}/>
 							</div>
 							<div className="row">
-								<LevelMeter/>
-								<TwitterFeed/>
+								<LevelMeter data={medUnit[0]}/>
 							</div>
 						</div>
 					</div>

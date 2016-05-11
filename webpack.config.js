@@ -17,6 +17,10 @@ var path = require('path'),
 					loaders: ['babel'],
 					include: path.join(__dirname, 'src/app/'),
 					exclude: /node_modules/
+				},
+				{
+					test: /\.json?$/,
+					loaders: ['json']
 				}
 			]
 		}

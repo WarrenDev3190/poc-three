@@ -9,13 +9,13 @@ class LevelMeter extends Component{
 			            <div className="row">
 			                <div className="col-md-7">
 			                    <div className="c-info">
-			                        <h3>cpu usages</h3>
-			                        <p>Once this tab is open click the CPU button above the list of programs twice</p>
+			                        <h3>Catheter Lvl</h3>
+			                        <p>This next level awards your unit a complementary pizza party!</p>
 			                    </div>
 			                </div>
 			                <div className="col-md-5">
 			                    <div className="easy-pie-chart">
-			                        <div className="percentage-light" data-percent="33"><span>33%</span>
+			                        <div className="percentage-light" data-percent="3"><span>{this.props.data.pts_level}</span>
 			                        </div>
 			                    </div>
 			                </div>
